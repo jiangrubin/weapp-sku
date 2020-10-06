@@ -1,0 +1,9 @@
+<view 
+  class="sku-row-item {{ choosed ? 'active' : '' }} {{ choosable ? '' : 'disabled' }}"
+  bind:tap="onSelect"
+>
+  <view wx:if="{{ skuValue.image }}" class="sku-row-item-img">
+    <image class="sku-row-item-thumb" src="{{ skuValue.image }}" mode="aspectFill" lazy-load="{{ true }}" />
+  </view>
+  <text class="sku-row-item-name">{{ skuValue.name }}</text>
+</view>

@@ -1,0 +1,75 @@
+<van-popup
+  show="{{ show }}"
+  round
+  closeable
+  position="bottom"
+  custom-class="sku-popup"
+  bind:close="onClose"
+>
+  <view class="sku-header van-hairline--bottom">
+    <view class="sku-header-img-wrap">
+      <image class="thumb" mode="aspectFit" src="{{ image }}" />
+    </view>
+    
+    <view class="sku-header-goods-info">
+      <view class="sku-goods-price">
+        <text class="sku-price-symbol">¥</text>
+        <text class="sku-price-num">{{ priceText }}</text>
+      </view>
+      <view class="sku-header-item">
+        <text class="sku-stock">剩余 <text>{{ stockNum }}</text> 件</text>
+      </view>
+      <view class="sku-header-item">{{ selectedText }}</view>
+    </view>
+  </view>
+
+  <scroll-view class="sku-body" scroll-y>
+    <view class="sku-group-container">
+      <block wx:for="{{ skuTree }}" wx:key="id">
+        <view class="sku-row van-hairline--bottom">
+          <view class="sku-row-title">{{ item.name }}</view>
+          <block wx:for="{{ item.values }}" wx:for-item="skuValue" wx:key="index">
+            <sku-row-item 
+              skuValue="{{ skuValue }}"
+              skuKeyStr="{{ item.k_s }}"
+              skuList="{{ skuList }}"
+              selectedSku="{{ selectedSku }}"
+              bind:select="onSelect"
+            />
+          </block>
+        </view>
+      </block>
+    </view>
+
+    <view class="sku-stepper-stock van-hairline--bottom">
+      <text class="sku-stepper-title">数量</text>
+      <van-stepper
+        disable-input
+        button-size="26px"
+        min="1"
+        max="{{ stockNum }}"
+        value="{{ countNum }}"
+        bind:change="onChangeStepper" 
+      />
+    </view>
+
+    <view wx:if="{{ showGoodsDetail }}" class="sku-goods-detail">
+      <view class="sku-goods-detail-title">商品详情</view>
+      <view>
+        <slot name="sku-detail"></slot>
+      </view>
+    </view>
+  </scroll-view>
+
+  <view class="sku-actions">
+    <van-row gutter="30">
+      <van-col wx:if="{{ showCart }}" span="12">
+        <van-button mark:eventType="add-cart" bind:click="onBuyOrAddCart" round block color="var(--cool-orange)" plain>加入购物车</van-button>
+      </van-col>
+
+      <van-col span="{{ showCart ? '12' : '24' }}">
+        <van-button mark:eventType="buy" bind:click="onBuyOrAddCart" round block color="var(--cool-linear-gradient)">立即购买</van-button>
+      </van-col>
+    </van-row>
+  </view>
+</van-popup>
