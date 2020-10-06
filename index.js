@@ -1,5 +1,5 @@
 import computedBehavior from 'miniprogram-computed'
-import { fenToYuan } from '../../utils/currency'
+import { fenToYuan } from './utils/currency'
 import { isSkuChoosable, isAllSelected, getSkuComb, getSelectedSkuValues, getSkuImgValue } from './utils/helper'
 
 // skuTree
