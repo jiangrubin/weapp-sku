@@ -4,6 +4,8 @@
 
 代码参考自 Vant 的 [SKU](https://youzan.github.io/vant/#/zh-CN/sku) 组件[源码](https://github.com/youzan/vant/tree/dev/src/sku)
 
+![](./docs/75FDCAC69D53.png)
+
 ## 运行
 
 - 微信开发者工具导入代码片段
