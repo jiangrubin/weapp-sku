@@ -1,7 +1,10 @@
 {
   "component": true,
   "usingComponents": {
+    "van-row": "@vant/weapp/row/index",
+    "van-col": "@vant/weapp/col/index",
     "van-popup": "@vant/weapp/popup/index",
+    "van-button": "@vant/weapp/button/index",
     "van-stepper": "@vant/weapp/stepper/index",
     "sku-row-item": "./components/row-item/index"
   }

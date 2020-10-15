@@ -1,0 +1,19 @@
+@import './miniprogram_npm/@vant/weapp/common/index.wxss';
+
+page {
+  color: #323233;
+  font-size: 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Segoe UI, Arial, Roboto, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei', sans-serif;
+  background-color: #f7f7f7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.van-button {
+  --button-default-height: 40px;
+}
+
+/* 步进器 禁用输入框状态下文字颜色 */
+.van-stepper__input--disabled {
+  --stepper-input-disabled-text-color: #323233;
+}

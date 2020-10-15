@@ -1,0 +1,11 @@
+<sku
+  show="{{ showSku }}"
+  sku-tree="{{ skuTree }}"
+  sku-list="{{ skuList }}"
+  picture="{{ skuPicture }}"
+  price="{{ skuPrice }}"
+  stock="{{ skuStock }}"
+  bind:close="onCloseSku"
+  bind:add-cart="onSkuAddCart"
+  bind:buy="onSkuBuy"
+/>

@@ -30,7 +30,7 @@ import { isSkuChoosable, isAllSelected, getSkuComb, getSelectedSkuValues, getSku
 // 数据结构如下: 
 // [
 //   {
-//     k_s: 2259, // skuId
+//     id: 2259, // skuId
 //     price: 100, // 价格（单位分）
 //     stock: 110, // 当前 sku 组合对应的库存
 //     0: '红色', // 规格类目 k_s 为 0 的对应规格值
@@ -66,7 +66,10 @@ Component({
     // 默认商品 sku 缩略图
     picture: String,
     // 默认价格（单位分）
-    price: Number,
+    price: {
+      type: Number,
+      value: 0,
+    },
     // 商品总库存
     stock: {
       type: Number,
@@ -107,15 +110,15 @@ Component({
 
     image (data) {
       // 选择单一规格时，切换封面图
-      // const selectedValue = getSkuImgValue(data.skuTree, data.selectedSku)
-      // const image = selectedValue ? selectedValue.image : data.picture
-      // return image
+      const selectedValue = getSkuImgValue(data.skuTree, data.selectedSku)
+      const image = selectedValue ? selectedValue.image : data.picture
+      return image
 
       // 选择完整的 sku 时，切换封面图
-      if (data.selectedSkuComb) {
-        return data.selectedSkuComb.image || data.picture
-      }
-      return data.picture
+      // if (data.selectedSkuComb) {
+      //   return data.selectedSkuComb.image || data.picture
+      // }
+      // return data.picture
     },
 
     priceText (data) {

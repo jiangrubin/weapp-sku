@@ -64,11 +64,11 @@
   <view class="sku-actions">
     <van-row gutter="30">
       <van-col wx:if="{{ showCart }}" span="12">
-        <van-button mark:eventType="add-cart" bind:click="onBuyOrAddCart" round block color="var(--cool-orange)" plain>加入购物车</van-button>
+        <van-button mark:eventType="add-cart" bind:click="onBuyOrAddCart" round block color="linear-gradient(to right, #ffd01e, #ff8917)">加入购物车</van-button>
       </van-col>
 
       <van-col span="{{ showCart ? '12' : '24' }}">
-        <van-button mark:eventType="buy" bind:click="onBuyOrAddCart" round block color="var(--cool-linear-gradient)">立即购买</van-button>
+        <van-button mark:eventType="buy" bind:click="onBuyOrAddCart" round block color="linear-gradient(to right, #ff6034, #ee0a24)">立即购买</van-button>
       </van-col>
     </van-row>
   </view>
