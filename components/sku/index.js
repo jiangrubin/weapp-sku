@@ -2,42 +2,6 @@ import computedBehavior from 'miniprogram-computed'
 import { fenToYuan } from './utils/currency'
 import { isSkuChoosable, isAllSelected, getSkuComb, getSelectedSkuValues, getSkuImgValue } from './utils/helper'
 
-// skuTree
-// 所有sku规格类目与其值的从属关系，比如商品有颜色和尺码两大类规格，颜色下面又有红色和蓝色两个规格值
-// 可以理解为一个商品可以有多个规格类目，一个规格类目下可以有多个规格值
-// 数据结构如下:
-// [
-//   {
-//     k_s: 0, // skuKey: skuList 中当前类目对应的 key 值，value 值会是从属于当前类目的一个规格值
-//     name: '颜色', // skuKeyName 规格类目名称
-//     values: [
-//       { name: '红色' },
-//       { name: '蓝色' },
-//     ], // 规格值
-//   },
-//   {
-//     k_s: 1,
-//     name: '尺寸',
-//     values: [
-//       { name: 'S' },
-//       { name: 'M' },
-//     ]
-//   }
-// ]
-
-// skuList
-// 所有 sku 的组合列表，比如红色、M 码为一个 sku 组合，红色、S 码为另一个组合
-// 数据结构如下: 
-// [
-//   {
-//     id: 2259, // skuId
-//     price: 100, // 价格（单位分）
-//     stock: 110, // 当前 sku 组合对应的库存
-//     0: '红色', // 规格类目 k_s 为 0 的对应规格值
-//     1: 'M', // 规格类目 k_s 为 1 的对应规格值
-//   }
-// ]
-
 Component({
   behaviors: [computedBehavior],
 
@@ -53,12 +17,10 @@ Component({
     show: {
       type: Boolean,
     },
-    // 详细说明见上
     skuTree: {
       type: Array,
       value: [],
     },
-    // 详细说明见上
     skuList: {
       type: Array,
       value: []
