@@ -83,7 +83,7 @@ Page({
 ### Events
 
 | 事件名 | 说明 | 回调参数 |
-| --- | --- | --- | --- |
+| --- | --- | --- |
 | close | 点击关闭回调 | - |
 | buy | 点击购买回调 | skuData: object |
 | add-cart | 点击添加购物车回调 | skuData: object |
