@@ -84,7 +84,7 @@ Page({
 
 | 事件名 | 说明 | 回调参数 |
 | --- | --- | --- |
-| close | 点击关闭回调 | - |
+| close | 点击关闭规格弹窗回调 | - |
 | buy | 点击购买回调 | skuData: object |
 | add-cart | 点击添加购物车回调 | skuData: object |
 
@@ -122,7 +122,7 @@ skuTree: [
   }
 ]
 
-// 所有 sku 的组合列表，比如红色、M 码为一个 sku 组合，红色、S 码为另一个组合
+// 所有 sku 的组合列表，比如粉色、大码为一个 sku 组合，黄色、小码为另一个组合
 skuList: [
   {
     id: 2259, // skuId
