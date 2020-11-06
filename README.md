@@ -4,7 +4,11 @@
 
 代码参考自 Vant 的 [SKU](https://youzan.github.io/vant/#/zh-CN/sku) 组件[源码](https://github.com/youzan/vant/tree/v2.10.12/src/sku)
 
-![](./docs/75FDCAC69D53.png)
+<details>
+  <summary>查看效果</summary>
+  
+  <img src="./docs/2891604630551.jpg" />
+</details>
 
 ## 运行
 
