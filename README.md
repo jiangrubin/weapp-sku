@@ -89,8 +89,8 @@ Page({
 | 事件名 | 说明 | 回调参数 |
 | --- | --- | --- |
 | close | 点击关闭规格弹窗回调 | - |
-| buy | 点击购买回调 | skuData: object |
-| add-cart | 点击添加购物车回调 | skuData: object |
+| buy | 点击购买回调 | [skuData: object](#添加购物车和点击购买回调函数接收的-skuData-对象结构) |
+| add-cart | 点击添加购物车回调 | [skuData: object](#添加购物车和点击购买回调函数接收的-skuData-对象结构) |
 
 ### sku 对象结构
 
