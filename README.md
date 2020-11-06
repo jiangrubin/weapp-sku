@@ -5,7 +5,6 @@
 代码参考自 Vant 的 [SKU](https://youzan.github.io/vant/#/zh-CN/sku) 组件[源码](https://github.com/youzan/vant/tree/v2.10.12/src/sku)
 
 ![](./docs/75FDCAC69D53.png)
-[效果图](./docs/75FDCAC69D53.png)
 
 ## 运行
 
