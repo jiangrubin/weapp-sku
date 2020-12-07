@@ -35,20 +35,19 @@
 }
 
 .sku-goods-price {
-  color: var(--cool-orange);
+  
 }
 
 .sku-price-symbol {
-  font-size: var(--cool-font-size-xl);
+  
 }
 
 .sku-price-num {
-  font-size: var(--cool-font-size-xxl);
+  
 }
 
 .sku-header-item {
   margin-top: 6px;
-  font-size: var(--cool-font-size-sm);
 }
 
 /*  */
@@ -83,8 +82,7 @@
 }
 
 .sku-row-title, .sku-stepper-title, .sku-goods-detail-title {
-  /* color: var(--cool-gray-1); */
-  font-size: var(--cool-font-size-md);
+  
 }
 
 .sku-goods-detail {
