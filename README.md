@@ -92,6 +92,14 @@ Page({
 | buy | 点击购买回调 | [skuData: object](#添加购物车和点击购买回调函数接收的-skuData-对象结构) |
 | add-cart | 点击添加购物车回调 | [skuData: object](#添加购物车和点击购买回调函数接收的-skuData-对象结构) |
 
+### 方法
+
+通过 selectComponent 可以获取到 sku 实例并调用实例方法。
+
+| 方法名 | 说明 | 参数 | 返回值 |
+| --- | --- | --- | --- |
+| getSkuData | 获取当前 skuData | - | skuData |
+
 ### sku 对象结构
 
 ```js
