@@ -62,7 +62,7 @@
   </scroll-view>
 
   <view class="sku-actions">
-    <van-row gutter="30">
+    <van-row gutter="16">
       <van-col wx:if="{{ showCart }}" span="12">
         <van-button mark:eventType="add-cart" bind:click="onBuyOrAddCart" round block color="linear-gradient(to right, #ffd01e, #ff8917)">加入购物车</van-button>
       </van-col>
